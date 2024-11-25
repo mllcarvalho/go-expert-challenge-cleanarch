@@ -58,5 +58,5 @@ services:
     command: >
       sh -c "
       sleep 10 &&
-      migrate -path=internal/infra/database/migrations -database \"mysql://$DB_USER:$DB_PASS@tcp($DB_HOST:$DB_PORT)/$DB_NAME\" -verbose up &&
+      migrate -path=internal/infra/database/migrations -database='mysql://$DB_USER:$DB_PASS@tcp($DB_HOST:$DB_PORT)/$DB_NAME' -verbose up &&
       ./app"
